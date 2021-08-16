@@ -1,0 +1,19 @@
+{
+  "name": "sos2021-sep-jdb",
+  "version": "1.0.0",
+  "description": "Projecto para recuperacion de septiembre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/SOS2021-sep-jdb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/SOS2021-sep-jdb/issues"
+  },
+  "homepage": "https://github.com/gti-sos/SOS2021-sep-jdb#readme"
+}
