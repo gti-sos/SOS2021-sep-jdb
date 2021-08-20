@@ -2,7 +2,7 @@ var express= require("express");
 
 var app=express();
 var path=require("path");
-var port=10000;
+var port=process.env.PORT||10000;
 
 
 //ruta estatica(ejecuta todo lo de dentro de public de la forma:/archivo.extension)
