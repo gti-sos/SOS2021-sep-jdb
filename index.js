@@ -8,7 +8,7 @@ var port=10000;
 //ruta estatica(ejecuta todo lo de dentro de public de la forma:/archivo.extension)
 app.use("/",express.static(path.join(__dirname + "/public")));
 
-
+//ruta 
 //ruta dinamica
 app.get("/home",(req,res)=>{
     res.send("<html><body><h1>HOLA</h1></body></html>");
