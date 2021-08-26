@@ -4,8 +4,20 @@
   "description": "Projecto para recuperacion de septiembre",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
   },
   "repository": {
     "type": "git",
@@ -18,6 +30,16 @@
   },
   "homepage": "https://github.com/gti-sos/SOS2021-sep-jdb#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "chart.js": "^3.5.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "npx": "^10.2.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "svelte-spa-router": "^3.2.0",
+    "sveltestrap": "^5.6.2",
+    "uninstall": "0.0.0"
   }
 }

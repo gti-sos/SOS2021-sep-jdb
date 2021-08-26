@@ -1,1 +1,4 @@
 node_modules
+public/build
+src/back/depression_stats_API/depression_stats.db
+srcaUX
