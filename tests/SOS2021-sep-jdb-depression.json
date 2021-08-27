@@ -122,7 +122,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -131,7 +131,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats"
 					]
 				}
@@ -153,7 +153,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats/Spain_Extremadura/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Extremadura/2011",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -162,7 +162,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats",
 						"Spain_Extremadura",
 						"2011"
@@ -186,7 +186,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats/Spain_Andalucia/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -195,7 +195,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats",
 						"Spain_Andalucia",
 						"2011"
@@ -219,7 +219,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats/Spain_Andalucia/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -228,7 +228,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats",
 						"Spain_Andalucia",
 						"2011"
@@ -243,7 +243,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -252,7 +252,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats"
 					]
 				}
@@ -265,7 +265,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -274,7 +274,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats"
 					]
 				}
@@ -287,7 +287,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v1/depression_stats/Spain_Andalucia/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -296,7 +296,7 @@
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"depression_stats",
 						"Spain_Andalucia",
 						"2011"
