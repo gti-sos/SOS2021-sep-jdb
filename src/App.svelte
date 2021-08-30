@@ -27,7 +27,7 @@
 	import children_out from "./front/depression_stats_API/children_out.svelte";
 	import suicides from "./front/depression_stats_API/suicides.svelte";
 	import obesity from "./front/depression_stats_API/obesity.svelte";
-	import Futbol from "./front/depression_stats_API/Futbol.svelte";
+	import Futbol from "./front/depression_stats_API/Futbol_integracion.svelte";
 	import bad from "./front/depression_stats_API/bad.svelte";
 	
 	
