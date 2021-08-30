@@ -1,76 +1,13 @@
 {
 	"info": {
-		"_postman_id": "116d421c-96d2-40b1-a00e-76f35c482687",
-		"name": "SOS2021-sep-jdb-depression",
+		"_postman_id": "0881e25c-2bfc-4a1b-bd8c-4a9bb06d4e59",
+		"name": "SOS2021-sep-jdb-depression_stats",
+		"description": "A sample of an API from the boards about Anxiety_stats with the docs from the latest version: D01",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://sos2021-sep-jdb.herokuapp.com/",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/",
-					"protocol": "http",
-					"host": [
-						"sos2021-sep-jdb",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "https://sos2021-sep-jdb.herokuapp.com/info/depression_stats",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://sos2021-sep-jdb.herokuapp.com/api/integration/depression_stats",
-					"protocol": "https",
-					"host": [
-						"sos2021-sep-jdb",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"integration",
-						"depression_stats"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "loadInitialData",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://sos2021-sep-jdb.herokuapp.com/api/integration/depression_statsloadInitialData",
-					"protocol": "https",
-					"host": [
-						"sos2021-sep-jdb",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"integration",
-						"depression_statsloadInitialData"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get datos iniciales",
+			"name": "GET depression_stats (EMPTY)",
 			"event": [
 				{
 					"listen": "test",
@@ -79,10 +16,41 @@
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"\r",
-							"pm.test(\"There are 6 anxiety_stats_boards\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.eql(6);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion GET LoadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -93,14 +61,199 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost/api/integration/depression_stats",
-					"protocol": "https",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/loadInitialData",
+					"protocol": "http",
 					"host": [
-						"localhost"
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"api",
-						"integration",
+						"v2",
+						"depression_stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Limit (1 o 2 Tablas)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats?limit=2",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Limit & Offset -> Spain_Andalucia",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v/depression_stats?limit=1&offset=1&year=2011",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v",
+						"depression_stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2011"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Limit & Offset -> Spain_Madrid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats?limit=1&offset=0&year=2011",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "year",
+							"value": "2011"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición GET anxiety_stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 2 anxiety_stats_boards\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
 						"depression_stats"
 					]
 				}
@@ -108,7 +261,94 @@
 			"response": []
 		},
 		{
-			"name": "post depression_stats",
+			"name": "Peticion GET a Recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats",
+						"Spain_Andalucia",
+						"2011"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion GET not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2000",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats",
+						"Spain_Andalucia",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -139,9 +379,23 @@
 			"response": []
 		},
 		{
-			"name": "delete de una dato",
+			"name": "peticion post conflictiva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 409 conflict\", function () {\r",
+							"    pm.response.to.have.status(409);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "DELETE",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -153,7 +407,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Extremadura/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -163,30 +417,38 @@
 					"path": [
 						"api",
 						"v2",
-						"depression_stats",
-						"Spain_Extremadura",
-						"2011"
+						"depression_stats"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "put modificar una tabla",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\t\"country\": \"Spain_Andalucia\",\r\n\t\"year\": 2011,\r\n\t\"depression_men\": 3.50,\r\n\t\"depression_women\": 5.70,\r\n\t\"depression_population\": 4.60\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+			"name": "GET depression_stats (POST)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 3 depression_stats_boards\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(3);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
 					}
-				},
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -196,18 +458,157 @@
 					"path": [
 						"api",
 						"v2",
-						"depression_stats",
-						"Spain_Andalucia",
-						"2011"
+						"depression_stats"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "peticion post no encontrada",
+			"name": "GET Spain_Extremadura mdt depression_men",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "POST",
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats?depression_men=4.22",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					],
+					"query": [
+						{
+							"key": "depression_men",
+							"value": "4.22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Spain_Andalucia mdt depression_women",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats?depression_women=11.60",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					],
+					"query": [
+						{
+							"key": "depression_women",
+							"value": "11.60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Spain_Castilla_la_mancha mdt depression_population",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats?depression_population=4.60",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					],
+					"query": [
+						{
+							"key": "depression_population",
+							"value": "4.60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion DELETE a Recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -219,6 +620,92 @@
 					}
 				},
 				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Castilla_la_mancha/2014",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats",
+						"Spain_Castilla_la_mancha",
+						"2014"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET depression_stats (DELETE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 2 anxiety_stats_boards\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion PUT a Recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"country\": \"Spain_Andalucia\",\r\n\t\"year\": 2011,\r\n\t\"anxiety_men\": 4.00,\r\n\t\"anxiety_women\": 11.60,\r\n\t\"anxiety_population\": 7.80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
 					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
 					"protocol": "http",
 					"host": [
@@ -238,7 +725,97 @@
 			"response": []
 		},
 		{
-			"name": "put no encontrado",
+			"name": "GET depression_stats (PUT)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 2 depression_stats_boards, one of them is updated\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion POST Erronea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-jdb",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"depression_stats",
+						"Spain_Andalucia",
+						"2011"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion PUT Erronea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -260,7 +837,20 @@
 			"response": []
 		},
 		{
-			"name": "delete general",
+			"name": "Peticion DELETE depression_stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -282,12 +872,26 @@
 			"response": []
 		},
 		{
-			"name": "get un recurso",
+			"name": "GET depression_stats (DELETE ALL)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats/Spain_Andalucia/2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -297,9 +901,7 @@
 					"path": [
 						"api",
 						"v2",
-						"depression_stats",
-						"Spain_Andalucia",
-						"2011"
+						"depression_stats"
 					]
 				}
 			},
