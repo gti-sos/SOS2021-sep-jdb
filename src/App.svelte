@@ -29,7 +29,7 @@
 	import obesity from "./front/depression_stats_API/obesity.svelte";
 	import Futbol from "./front/depression_stats_API/Futbol.svelte";
 	import bad from "./front/depression_stats_API/bad.svelte";
-
+	//hola
 	
 	const routes = {
 		"/": Home,
