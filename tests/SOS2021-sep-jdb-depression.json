@@ -140,7 +140,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v/depression_stats?limit=1&offset=1&year=2011",
+					"raw": "http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats?limit=1&offset=1&year=2011",
 					"protocol": "http",
 					"host": [
 						"sos2021-sep-jdb",
@@ -149,7 +149,7 @@
 					],
 					"path": [
 						"api",
-						"v",
+						"v2",
 						"depression_stats"
 					],
 					"query": [
@@ -221,7 +221,7 @@
 			"response": []
 		},
 		{
-			"name": "Petición GET anxiety_stats",
+			"name": "Petición GET depression_stats",
 			"event": [
 				{
 					"listen": "test",
@@ -231,9 +231,9 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"There are 2 anxiety_stats_boards\", function () {\r",
+							"pm.test(\"There are 2 depression_stats_boards\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"    pm.expect(jsonData.length).to.eql(6);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -354,7 +354,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"country\": \"Spain_Extremadura\",\r\n\t\"year\": 2011,\r\n\t\"depression_men\": 4.22,\r\n\t\"depression_women\": 24.33,\r\n\t\"depression_population\": 14.39\r\n}",
+					"raw": "{\r\n\t\"country\": \"Spain_barcelona\",\r\n\t\"year\": 2011,\r\n\t\"depression_men\": 4.22,\r\n\t\"depression_women\": 24.33,\r\n\t\"depression_population\": 14.39\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -434,9 +434,9 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"There are 3 depression_stats_boards\", function () {\r",
+							"pm.test(\"There are 7 depression_stats_boards\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.eql(3);\r",
+							"    pm.expect(jsonData.length).to.eql(7);\r",
 							"});\r",
 							""
 						],
@@ -649,9 +649,9 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"There are 2 anxiety_stats_boards\", function () {\r",
+							"pm.test(\"There are 6 anxiety_stats_boards\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"    pm.expect(jsonData.length).to.eql(6);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -735,9 +735,9 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"There are 2 depression_stats_boards, one of them is updated\", function () {\r",
+							"pm.test(\"There are 6 depression_stats_boards, one of them is updated\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"    pm.expect(jsonData.length).to.eql(6);\r",
 							"});"
 						],
 						"type": "text/javascript"
