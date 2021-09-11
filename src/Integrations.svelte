@@ -51,11 +51,8 @@
                     <CardText
                         > Gráficos base de depression_svelte</CardText
                     >
-                    <a href="/#/analytics/depression_stats_graph">
-                        <Button type="button" class="btn btn-info">Depression_1</Button></a
-                    >
                     <a href="/#/analytics/depression_stats_chart">
-                        <Button type="button" class="btn btn-info">Depression_2</Button></a
+                        <Button type="button" class="btn btn-info">Depression_1</Button></a
                     >
                    
                 </CardBody>

@@ -14,10 +14,10 @@
 	import edit_depression_stats from "./front/depression_stats_API/DepressionStatsEdit.svelte";
 
 	
-	import analytics from "./front/Analytics/MedicalIssues.svelte";
+	
 
 
-	import depression_stats_graph from "./front/Analytics/depression/DepressionStatsGraph.svelte";
+
 	import depression_stats_chart from "./front/Analytics/depression/DepressionStatsChart.svelte";
 
 	
@@ -41,12 +41,12 @@
 		"/depression_stats/:country/:year": edit_depression_stats,
 		
 
-		"/analytics/depression_stats_graph": depression_stats_graph,
+		
 		"/analytics/depression_stats_chart": depression_stats_chart,
 
 		
 
-		"/analytics": analytics,
+		
 
 		
 		
