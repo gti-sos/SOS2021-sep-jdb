@@ -10,5 +10,5 @@
 - **URL**: [http://sos2021-sep-jdb.herokuapp.com](http://sos2021-sep-jdb.herokuapp.com)
 -  **APIs**:
     
-    - [https://sos2021-sep-jdb.herokuapp.com/api/integrations/depression_stats](https://sos2021-sep-jdb.herokuapp.com/api/integrations/depression_stats) (developed by [Juan Diez Blanco](https://github.com/jdblanco))
+    - [https://sos2021-sep-jdb.herokuapp.com/api/integrations/depression_stats](http://sos2021-sep-jdb.herokuapp.com/api/integrations/depression_stats) (developed by [Juan Diez Blanco](https://github.com/jdblanco))
 	 

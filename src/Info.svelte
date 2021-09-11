@@ -64,7 +64,7 @@
                         en las comunidades autónomas de España.</CardText
                     >
                     <a
-                        href="https://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats"
+                        href="http://sos2021-sep-jdb.herokuapp.com/api/v2/depression_stats"
                     >
                         <Button color="info">API </Button></a
                     >
