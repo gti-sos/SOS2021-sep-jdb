@@ -50,7 +50,7 @@
                     <CardText
                         >Video Explicativo sobre depression_stats</CardText
                     >
-                    <a href="/#/analytics/depression_stats_graph">
+                    <a href="https://www.youtube.com/watch?v=1mTH6A5bGv8">
                         <Button type="button" class="btn btn-info"
                             >Video Depression</Button
                         ></a
